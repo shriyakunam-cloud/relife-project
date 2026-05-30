@@ -10,14 +10,14 @@
   <meta name="google-site-verification" content="13NmtbyKN-PT7Z7BbTA_aUU-dZgF832eXtx0duf6ntU" />
   <link rel="canonical" href="https://www.relifeproject.org" />
 
-  <!-- Open Graph (for sharing on social media) -->
+  <!-- Open Graph -->
   <meta property="og:title" content="The ReLife Project" />
   <meta property="og:description" content="A youth-driven nonprofit educating communities about how environmental toxins affect brain health." />
   <meta property="og:url" content="https://www.relifeproject.org" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="The ReLife Project" />
 
-  <!-- Structured data for Google -->
+  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -29,14 +29,15 @@
     "description": "A youth-driven nonprofit educating communities about how environmental toxins affect brain health through workshops, campaigns, and expert interviews.",
     "foundingDate": "2024",
     "knowsAbout": ["environmental health", "brain health", "neuroscience", "microplastics", "public health education"],
-    "areaServed": "Worldwide",
-    "nonprofit501c3": true
+    "areaServed": "Worldwide"
   }
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -45,13 +46,14 @@
   <nav id="navbar">
     <div class="nav-inner">
       <a href="#hero" class="logo">
-        <span class="logo-leaf">🌿</span>
+        <i class="fa-solid fa-leaf logo-icon"></i>
         <span>The ReLife Project</span>
       </a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#initiatives">Initiatives</a></li>
         <li><a href="#greenroom">The Green Room</a></li>
+        <li><a href="#why">The Science</a></li>
         <li><a href="#contact" class="nav-cta">Get Involved</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -62,6 +64,7 @@
       <a href="#about">About</a>
       <a href="#initiatives">Initiatives</a>
       <a href="#greenroom">The Green Room</a>
+      <a href="#why">The Science</a>
       <a href="#contact">Get Involved</a>
     </div>
   </nav>
@@ -119,15 +122,15 @@
     <div class="container about-grid">
       <div class="about-visual">
         <div class="about-card card-1">
-          <div class="card-icon">🧠</div>
+          <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
           <p>Environmental toxins can rewire how your brain develops</p>
         </div>
         <div class="about-card card-2">
-          <div class="card-icon">🔬</div>
+          <div class="card-icon"><i class="fa-solid fa-microscope"></i></div>
           <p>Research is limited — curiosity is our most powerful tool</p>
         </div>
         <div class="about-card card-3">
-          <div class="card-icon">💡</div>
+          <div class="card-icon"><i class="fa-solid fa-lightbulb"></i></div>
           <p>Knowledge is the first step toward real change</p>
         </div>
         <div class="about-orb orb-1"></div>
@@ -159,6 +162,39 @@
     </div>
   </section>
 
+  <!-- ─── VALUES ────────────────────────────────────────────────────────── -->
+  <section id="values">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">What Drives Us</div>
+        <h2>Our Core Values</h2>
+        <p class="section-sub">Everything we do is rooted in these four principles.</p>
+      </div>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <h3>Curiosity</h3>
+          <p>We ask the questions others overlook. The link between environment and brain health is underexplored — we dig in anyway.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon"><i class="fa-solid fa-people-group"></i></div>
+          <h3>Accessibility</h3>
+          <p>Science belongs to everyone. We translate complex research into language and formats that any person — of any age — can understand and act on.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon"><i class="fa-solid fa-seedling"></i></div>
+          <h3>Action</h3>
+          <p>We don't just raise awareness — we spark change. Every workshop, post, and interview is designed to move people from knowing to doing.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+          <h3>Community</h3>
+          <p>Real impact happens locally. We build relationships with libraries, schools, and neighborhoods to create lasting change from the ground up.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ─── INITIATIVES ───────────────────────────────────────────────────── -->
   <section id="initiatives">
     <div class="container">
@@ -174,46 +210,101 @@
 
         <div class="initiative-card">
           <div class="init-icon-wrap" style="background: var(--green-soft);">
-            <span class="init-icon">🏛️</span>
+            <i class="fa-solid fa-building-columns init-icon" style="color: var(--green);"></i>
           </div>
           <h3>Library Workshops</h3>
           <p>
             We host hands-on, interactive workshops at local libraries where
-            community members of all ages get to learn about environmental
-            health in a tangible, engaging way — including testing real water
-            samples for contaminants.
+            community members of all ages learn about environmental health in a
+            tangible, engaging way — including testing real water samples for
+            contaminants and exploring how pollutants travel through ecosystems.
           </p>
+          <ul class="init-features">
+            <li><i class="fa-solid fa-check"></i> Free & open to all ages</li>
+            <li><i class="fa-solid fa-check"></i> Hands-on experiments</li>
+            <li><i class="fa-solid fa-check"></i> Take-home resources</li>
+          </ul>
           <div class="init-tag">Community Outreach</div>
         </div>
 
         <div class="initiative-card featured-init">
-          <div class="init-icon-wrap" style="background: var(--teal-soft);">
-            <span class="init-icon">📱</span>
+          <div class="init-icon-wrap" style="background: rgba(255,255,255,0.2);">
+            <i class="fa-solid fa-mobile-screen init-icon" style="color: #fff;"></i>
           </div>
           <h3>Educational Campaigns</h3>
           <p>
             Our social media campaigns translate dense scientific research
             into clear, compelling content. We meet people where they are —
             online — with visuals, explainers, and stories that make the
-            science stick.
+            science stick and inspire real behavioral change.
           </p>
+          <ul class="init-features" style="color: rgba(255,255,255,0.85);">
+            <li><i class="fa-solid fa-check"></i> Digestible infographics</li>
+            <li><i class="fa-solid fa-check"></i> Research-backed content</li>
+            <li><i class="fa-solid fa-check"></i> Wide reach across platforms</li>
+          </ul>
           <div class="init-tag">Digital Education</div>
         </div>
 
         <div class="initiative-card">
           <div class="init-icon-wrap" style="background: var(--sage-soft);">
-            <span class="init-icon">🎙️</span>
+            <i class="fa-solid fa-microphone init-icon" style="color: var(--sage);"></i>
           </div>
           <h3>The Green Room</h3>
           <p>
             Our original interview series featuring neuroscientists, public
             health experts, and environmental researchers. Real conversations
             that bring cutting-edge science out of the lab and into the
-            public conversation.
+            public conversation — making expert knowledge available to all.
           </p>
+          <ul class="init-features">
+            <li><i class="fa-solid fa-check"></i> Expert guest speakers</li>
+            <li><i class="fa-solid fa-check"></i> Jargon-free discussions</li>
+            <li><i class="fa-solid fa-check"></i> Free to watch & share</li>
+          </ul>
           <div class="init-tag">Expert Interviews</div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── HOW IT WORKS ─────────────────────────────────────────────────── -->
+  <section id="how">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Our Approach</div>
+        <h2>How We Create Change</h2>
+        <p class="section-sub">A simple, repeatable process for turning science into action.</p>
+      </div>
+      <div class="how-grid">
+        <div class="how-step">
+          <div class="how-num">01</div>
+          <div class="how-icon"><i class="fa-solid fa-book-open"></i></div>
+          <h3>Research</h3>
+          <p>We dive deep into peer-reviewed science on environmental toxins and their neurological effects — then translate it into plain language.</p>
+        </div>
+        <div class="how-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="how-step">
+          <div class="how-num">02</div>
+          <div class="how-icon"><i class="fa-solid fa-pen-nib"></i></div>
+          <h3>Create</h3>
+          <p>We turn that research into workshops, social media content, and interview episodes that are engaging, accurate, and accessible.</p>
+        </div>
+        <div class="how-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="how-step">
+          <div class="how-num">03</div>
+          <div class="how-icon"><i class="fa-solid fa-bullhorn"></i></div>
+          <h3>Educate</h3>
+          <p>We bring that content directly to communities — through libraries, schools, and online platforms — meeting people where they already are.</p>
+        </div>
+        <div class="how-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="how-step">
+          <div class="how-num">04</div>
+          <div class="how-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h3>Inspire Action</h3>
+          <p>Informed communities make better choices — for themselves, their families, and their environments. That ripple effect is our goal.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -239,28 +330,29 @@
           <p>
             Behind every headline about pollution, climate, or public health
             is a scientist who's spent years studying exactly that. The Green
-            Room brings those voices to you.
+            Room brings those voices directly to you.
           </p>
           <p>
             We sit down with neuroscientists, environmental researchers, and
             public health experts for honest, unfiltered conversations about
-            what they're finding — and what it means for all of us.
+            what they're finding — and what it means for all of us. No jargon,
+            no gatekeeping — just real science made real.
           </p>
           <ul class="greenroom-list">
             <li>
-              <span class="check">✓</span>
+              <span class="check"><i class="fa-solid fa-check"></i></span>
               Interviews with leading researchers & experts
             </li>
             <li>
-              <span class="check">✓</span>
+              <span class="check"><i class="fa-solid fa-check"></i></span>
               Topics spanning neuroscience, toxicology & public health
             </li>
             <li>
-              <span class="check">✓</span>
+              <span class="check"><i class="fa-solid fa-check"></i></span>
               Accessible, jargon-free conversations
             </li>
             <li>
-              <span class="check">✓</span>
+              <span class="check"><i class="fa-solid fa-check"></i></span>
               Free for everyone, everywhere
             </li>
           </ul>
@@ -268,7 +360,7 @@
         </div>
         <div class="greenroom-visual">
           <div class="gr-card">
-            <div class="gr-mic">🎙️</div>
+            <div class="gr-mic"><i class="fa-solid fa-microphone"></i></div>
             <div class="gr-label">The Green Room</div>
             <div class="gr-subtitle">Expert Interview Series</div>
             <div class="gr-waves">
@@ -294,38 +386,95 @@
       </div>
       <div class="why-grid">
         <div class="why-card">
-          <div class="why-icon">💧</div>
+          <div class="why-icon"><i class="fa-solid fa-droplet"></i></div>
           <h3>Microplastics in Water</h3>
           <p>
             Microplastics have been detected in drinking water worldwide and
             are increasingly linked to neurological inflammation and cognitive
-            disruption.
+            disruption. Most people have no idea they're drinking them daily.
           </p>
         </div>
         <div class="why-card">
-          <div class="why-icon">🏠</div>
+          <div class="why-icon"><i class="fa-solid fa-house-crack"></i></div>
           <h3>Lead in Old Paint</h3>
           <p>
             Lead exposure — even at low levels — is well-documented to impair
             IQ, attention, and emotional regulation, particularly in children.
+            Millions of older homes still contain it.
           </p>
         </div>
         <div class="why-card">
-          <div class="why-icon">🌫️</div>
+          <div class="why-icon"><i class="fa-solid fa-smog"></i></div>
           <h3>Air Pollution & Cognition</h3>
           <p>
             Studies increasingly link long-term air pollution exposure to
             accelerated cognitive decline, depression, and neurodevelopmental
-            disorders.
+            disorders across all age groups.
           </p>
         </div>
         <div class="why-card">
-          <div class="why-icon">📉</div>
+          <div class="why-icon"><i class="fa-solid fa-chart-line"></i></div>
           <h3>Limited Research Access</h3>
           <p>
             Young researchers face enormous barriers entering environmental
-            neuroscience. We're building bridges to change that.
+            neuroscience. Funding is scarce, awareness is low. We're
+            building bridges to change that.
           </p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fa-solid fa-flask"></i></div>
+          <h3>Chemicals in Food Packaging</h3>
+          <p>
+            PFAS, phthalates, and BPA found in everyday packaging have been
+            linked to hormonal disruption and neurodevelopmental impacts —
+            especially in growing children.
+          </p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fa-solid fa-earth-americas"></i></div>
+          <h3>Soil Contamination</h3>
+          <p>
+            Industrial and agricultural chemical runoff contaminates soil in
+            communities worldwide, creating chronic low-level exposures that
+            accumulate silently over time.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── GET INVOLVED CARDS ───────────────────────────────────────────── -->
+  <section id="involve">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Join Us</div>
+        <h2>Ways to Get Involved</h2>
+        <p class="section-sub">No matter your background, there's a role for you at The ReLife Project.</p>
+      </div>
+      <div class="involve-grid">
+        <div class="involve-card">
+          <div class="involve-icon"><i class="fa-solid fa-hands-helping"></i></div>
+          <h3>Volunteer</h3>
+          <p>Join our growing team of passionate volunteers helping with research, content creation, events, and outreach.</p>
+          <a href="#contact" class="btn btn-primary">Apply Now</a>
+        </div>
+        <div class="involve-card">
+          <div class="involve-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+          <h3>Host a Workshop</h3>
+          <p>Are you a librarian, teacher, or community organizer? Bring one of our free workshops to your space.</p>
+          <a href="#contact" class="btn btn-primary">Get in Touch</a>
+        </div>
+        <div class="involve-card">
+          <div class="involve-icon"><i class="fa-solid fa-share-nodes"></i></div>
+          <h3>Spread the Word</h3>
+          <p>Follow us on social media and share our content. Every share reaches someone who deserves to know this science.</p>
+          <a href="#contact" class="btn btn-primary">Contact Us</a>
+        </div>
+        <div class="involve-card">
+          <div class="involve-icon"><i class="fa-solid fa-user-tie"></i></div>
+          <h3>Be a Guest Expert</h3>
+          <p>Are you a researcher, scientist, or public health professional? We'd love to feature you on The Green Room.</p>
+          <a href="#contact" class="btn btn-primary">Reach Out</a>
         </div>
       </div>
     </div>
@@ -343,29 +492,43 @@
         </p>
         <div class="contact-options">
           <div class="contact-option">
-            <span class="co-icon">📧</span>
+            <span class="co-icon"><i class="fa-solid fa-envelope"></i></span>
             <div>
               <div class="co-label">Email Us</div>
               <a href="mailto:relifeproj@gmail.com">relifeproj@gmail.com</a>
             </div>
           </div>
           <div class="contact-option">
-            <span class="co-icon">🤝</span>
+            <span class="co-icon"><i class="fa-solid fa-handshake"></i></span>
             <div>
               <div class="co-label">Volunteer</div>
               <span>Reach out to join our team</span>
             </div>
           </div>
           <div class="contact-option">
-            <span class="co-icon">🏫</span>
+            <span class="co-icon"><i class="fa-solid fa-school"></i></span>
             <div>
               <div class="co-label">Host a Workshop</div>
               <span>Bring us to your library or school</span>
             </div>
           </div>
+            <div class="contact-option">
+            <span class="co-icon"><i class="fa-solid fa-microphone-lines"></i></span>
+            <div>
+              <div class="co-label">The Green Room</div>
+              <span>Inquire about being a guest expert</span>
+            </div>
+          </div>
+          <div class="contact-option">
+            <span class="co-icon"><i class="fa-brands fa-instagram"></i></span>
+            <div>
+              <div class="co-label">Instagram</div>
+              <a href="https://www.instagram.com/the.relife.project" target="_blank" rel="noopener">@the.relife.project</a>
+            </div>
+          </div>
         </div>
       </div>
-      <form class="contact-form" id="contactForm">
+      <form class="contact-form" id="contactForm" action="https://formspree.io/f/xqejjnkg" method="POST">
         <h3>Send a Message</h3>
         <div class="form-group">
           <label for="name">Name</label>
@@ -383,6 +546,7 @@
             <option value="workshop">Hosting a Workshop</option>
             <option value="greenroom">The Green Room / Interviews</option>
             <option value="partner">Partnering / Collaboration</option>
+            <option value="expert">Being a Guest Expert</option>
             <option value="other">Something Else</option>
           </select>
         </div>
@@ -390,7 +554,13 @@
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="4" placeholder="Tell us about yourself or your idea…"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary btn-full">Send Message →</button>
+        <!-- Formspree hidden fields -->
+        <input type="hidden" name="_subject" value="New Inquiry — The ReLife Project" />
+        <input type="hidden" name="_replyto" id="replyto" value="" />
+        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">Send Message →</button>
+        <div class="form-success" id="formSuccess">
+          <i class="fa-solid fa-circle-check"></i> Message sent! We'll reply to you within a few days.
+        </div>
         <div class="form-note">We'll reply within a few days via email.</div>
       </form>
     </div>
@@ -401,11 +571,14 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <a href="#hero" class="logo">
-          <span class="logo-leaf">🌿</span>
+          <i class="fa-solid fa-leaf logo-icon"></i>
           <span>The ReLife Project</span>
         </a>
         <p>A youth-driven nonprofit educating communities about the link between environmental health and brain health.</p>
         <a href="mailto:relifeproj@gmail.com">relifeproj@gmail.com</a>
+        <a href="https://www.instagram.com/the.relife.project" target="_blank" rel="noopener" class="footer-insta">
+          <i class="fa-brands fa-instagram"></i> @the.relife.project
+        </a>
       </div>
       <div class="footer-links">
         <div class="footer-col">
@@ -414,6 +587,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#initiatives">Initiatives</a></li>
             <li><a href="#greenroom">The Green Room</a></li>
+            <li><a href="#why">The Science</a></li>
             <li><a href="#contact">Get Involved</a></li>
           </ul>
         </div>
@@ -428,10 +602,13 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 The ReLife Project · All rights reserved</p>
+      <p>© 2025 The ReLife Project · All rights reserved · <a href="mailto:relifeproj@gmail.com" style="color:rgba(255,255,255,.4)">relifeproj@gmail.com</a></p>
     </div>
   </footer>
 
+  <!-- GSAP + ScrollTrigger (professional animation library) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

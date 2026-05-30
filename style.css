@@ -658,7 +658,7 @@ h2 {
 
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
@@ -800,7 +800,9 @@ h2 {
   font-weight: 600;
   margin-top: 16px;
   display: none;
+  gap: 10px;
 }
+.form-success i { font-size: 1.2rem; }
 
 /* ── Footer ──────────────────────────────────────────────────────────────── */
 footer {
@@ -829,8 +831,11 @@ footer {
   color: var(--green-light);
   font-size: .9rem;
   font-weight: 500;
+  display: block;
+  margin-bottom: 6px;
 }
 .footer-brand a:hover { color: var(--white); }
+.footer-insta { display: flex !important; align-items: center; gap: 7px; }
 
 .footer-links {
   display: grid;
@@ -862,21 +867,215 @@ footer {
   color: rgba(255,255,255,.3);
 }
 
-/* ── Scroll animations ───────────────────────────────────────────────────── */
-.reveal {
-  opacity: 0;
-  transform: translateY(32px);
-  transition: opacity .7s ease, transform .7s ease;
+/* ── Icon replacements ───────────────────────────────────────────────────── */
+.logo-icon { font-size: 1.2rem; color: var(--green-light); }
+#navbar.scrolled .logo-icon { color: var(--green); }
+
+.card-icon i { font-size: 1.6rem; color: var(--green); }
+.why-icon i  { font-size: 2rem; color: var(--green); }
+.gr-mic i    { font-size: 3rem; color: var(--green-light); }
+.co-icon i   { font-size: 1.2rem; color: var(--green); }
+
+/* ── Values ──────────────────────────────────────────────────────────────── */
+#values {
+  padding: 120px 0;
+  background: var(--dark);
 }
-.reveal.visible {
-  opacity: 1;
-  transform: none;
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.value-card {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius-lg);
+  padding: 36px 28px;
+  transition: var(--transition);
+}
+.value-card:hover {
+  background: rgba(255,255,255,.08);
+  border-color: var(--green-light);
+  transform: translateY(-4px);
+}
+
+.value-icon {
+  width: 56px; height: 56px;
+  background: rgba(74,170,114,.15);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.value-icon i { font-size: 1.4rem; color: var(--green-light); }
+
+.value-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.value-card p { font-size: .9rem; color: rgba(255,255,255,.55); line-height: 1.7; }
+
+/* ── Initiative features list ────────────────────────────────────────────── */
+.init-features {
+  margin: 16px 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.init-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: .88rem;
+  color: var(--gray);
+}
+.init-features li i { color: var(--green); font-size: .8rem; }
+.featured-init .init-features li i { color: rgba(255,255,255,.7); }
+
+/* ── How it works ────────────────────────────────────────────────────────── */
+#how {
+  padding: 120px 0;
+  background: var(--cream);
+}
+
+.how-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  gap: 16px;
+  align-items: center;
+}
+
+.how-step {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px 28px;
+  text-align: center;
+  transition: var(--transition);
+}
+.how-step:hover {
+  border-color: var(--green-light);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.how-num {
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  color: var(--green);
+  margin-bottom: 16px;
+}
+
+.how-icon {
+  width: 60px; height: 60px;
+  background: var(--green-soft);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+.how-icon i { font-size: 1.3rem; color: var(--green); }
+
+.how-step h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.how-step p { font-size: .88rem; color: var(--gray); line-height: 1.65; }
+
+.how-arrow {
+  color: var(--gray-light);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Get Involved Cards ──────────────────────────────────────────────────── */
+#involve {
+  padding: 120px 0;
+  background: var(--white);
+}
+
+.involve-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.involve-card {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 40px 28px;
+  text-align: center;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.involve-card:hover {
+  border-color: var(--green-light);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-6px);
+}
+
+.involve-icon {
+  width: 72px; height: 72px;
+  background: var(--green-soft);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.involve-icon i { font-size: 1.6rem; color: var(--green); }
+
+.involve-card h3 { font-size: 1.15rem; font-weight: 700; }
+.involve-card p { font-size: .9rem; color: var(--gray); line-height: 1.65; flex: 1; }
+.involve-card .btn { margin-top: 4px; justify-content: center; }
+
+/* ── Motion JS handles all scroll animations ─────────────────────────────── */
+/* Set initial opacity to 0 on animated elements so there's no flash */
+.stat-card,
+.about-card,
+.about-text > *,
+.value-card,
+.initiative-card,
+.how-step,
+.how-arrow,
+.why-card,
+.involve-card,
+.contact-form,
+.contact-text > *,
+.greenroom-text > *,
+.gr-card,
+#mission-banner blockquote,
+#mission-banner p {
+  opacity: 0;
+}
+.hero-content h1,
+.hero-sub,
+.hero-actions .btn,
+.hero-scroll-hint {
+  opacity: 0;
 }
 
 /* ── Responsive ──────────────────────────────────────────────────────────── */
 @media (max-width: 1024px) {
   .why-grid { grid-template-columns: repeat(2, 1fr); }
   .about-grid, .contact-grid, .greenroom-inner { gap: 48px; }
+  .values-grid { grid-template-columns: repeat(2, 1fr); }
+  .involve-grid { grid-template-columns: repeat(2, 1fr); }
+  .how-grid { grid-template-columns: repeat(2, 1fr); }
+  .how-arrow { display: none; }
 }
 
 @media (max-width: 900px) {
