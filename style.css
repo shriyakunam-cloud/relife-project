@@ -467,7 +467,7 @@ h2 {
   border-color: var(--green);
   color: var(--white);
 }
-.featured-init p { color: rgba(255,255,255,.8); }
+.featured-init p { color: #ffffff; }
 .featured-init .init-tag {
   background: rgba(255,255,255,.2);
   color: var(--white);
