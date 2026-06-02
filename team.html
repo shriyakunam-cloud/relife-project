@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meet the Team — The ReLife Project</title>
+  <meta name="description" content="Meet the co-founders of The ReLife Project — Rishita Kunam and Shriya Kunam." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="pages.css" />
+  <style>
+    .team-section {
+      padding: 100px 0;
+      background: var(--cream);
+    }
+
+    .team-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .team-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .team-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--green-light);
+    }
+
+    .team-photo-wrap {
+      width: 100%;
+      aspect-ratio: 4 / 4;
+      overflow: hidden;
+      background: linear-gradient(135deg, #1a5e3a, #2d7a4f);
+    }
+
+    .team-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      transition: transform .5s ease;
+    }
+
+    .team-card:hover .team-photo-wrap img {
+      transform: scale(1.04);
+    }
+
+    .team-info {
+      padding: 36px 36px 40px;
+    }
+
+    .team-title {
+      display: inline-block;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--green-dark);
+      background: var(--green-soft);
+      padding: 4px 14px;
+      border-radius: 99px;
+      margin-bottom: 14px;
+    }
+
+    .team-info h2 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .team-bio {
+      font-size: .95rem;
+      color: var(--gray);
+      line-height: 1.8;
+    }
+
+    .team-divider {
+      width: 40px;
+      height: 3px;
+      background: var(--green);
+      border-radius: 99px;
+      margin: 18px 0;
+    }
+
+    /* Mission strip */
+    .team-mission {
+      background: var(--dark);
+      padding: 80px 0;
+      text-align: center;
+    }
+    .team-mission h2 {
+      color: var(--white);
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      max-width: 640px;
+      margin: 0 auto 24px;
+      line-height: 1.4;
+      font-weight: 700;
+    }
+    .team-mission p {
+      color: rgba(255,255,255,.5);
+      font-size: .95rem;
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: 720px) {
+      .team-cards { grid-template-columns: 1fr; gap: 32px; }
+      .team-info { padding: 28px 24px 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar" class="scrolled">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-leaf logo-icon"></i>
+        <span>The ReLife Project</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#initiatives">Initiatives</a></li>
+        <li><a href="index.html#greenroom">The Green Room</a></li>
+        <li><a href="index.html#why">The Science</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="index.html#contact" class="nav-cta">Get Involved</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html#about">About</a>
+      <a href="index.html#initiatives">Initiatives</a>
+      <a href="index.html#greenroom">The Green Room</a>
+      <a href="index.html#why">The Science</a>
+      <a href="team.html">Our Team</a>
+      <a href="index.html#contact">Get Involved</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-label">The People Behind the Mission</div>
+      <h1>Meet the Team</h1>
+      <p>The ReLife Project is built by young people who believe science should be accessible, actionable, and in the hands of everyone.</p>
+    </div>
+  </section>
+
+  <!-- TEAM CARDS -->
+  <section class="team-section">
+    <div class="container">
+      <div class="team-cards">
+
+        <!-- Rishita -->
+        <div class="team-card">
+          <div class="team-photo-wrap">
+            <img src="Rishita Kunam.png" alt="Rishita Kunam, Co-Founder and CEO of The ReLife Project" />
+          </div>
+          <div class="team-info">
+            <div class="team-title">Co-Founder &amp; CEO</div>
+            <h2>Rishita Kunam</h2>
+            <div class="team-divider"></div>
+            <p class="team-bio">
+              Rishita is a student leader, STEM advocate, and aspiring healthcare innovator whose work spans statewide leadership, education, and scientific research. Elected to serve as Vice President of Innovation for Georgia HOSA, she represents and helps lead a network of more than 20,000 members, driving statewide outreach, content strategy, and initiatives designed to strengthen engagement across hundreds of chapters. A student at Denmark High School, she serves as President of Women in STEM while also holding leadership positions in Model United Nations. She was also selected as a Georgia Governor's Honors Program finalist in Agricultural Research and Biotechnology. Through leadership, research, and service, Rishita is committed to expanding educational access and advancing innovation in STEM.
+            </p>
+          </div>
+        </div>
+
+        <!-- Shriya -->
+        <div class="team-card">
+          <div class="team-photo-wrap">
+            <img src="Shriya Kunam.png" alt="Shriya Kunam, Co-Founder of The ReLife Project" />
+          </div>
+          <div class="team-info">
+            <div class="team-title">Co-Founder</div>
+            <h2>Shriya Kunam</h2>
+            <div class="team-divider"></div>
+            <p class="team-bio">
+              Shriya Kunam is a student at Yale University in New Haven, CT studying Neuroscience and Molecular Biology. She conducts research spanning computational neuroscience, neuroimaging, and machine learning applications for neurological disease.
+            </p>
+            <br />
+            <p class="team-bio">
+              She serves as the International Eastern Vice President of HOSA–Future Health Professionals, an elected role through which she helps represent and advance the interests of more than 330,000 members worldwide. Her work has earned recognition through numerous fellowships, supporting her research in computational neuro-oncology and precision medicine. Through research, entrepreneurship, and global leadership, she is committed to shaping the future of intelligent and accessible healthcare.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION STRIP -->
+  <section class="team-mission">
+    <div class="container">
+      <h2>"Every project reminds us that knowledge isn't just power. It's the first step toward change."</h2>
+      <p>The ReLife Project</p>
+      <a href="index.html#contact" class="btn btn-primary">Join Our Mission</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <i class="fa-solid fa-leaf logo-icon"></i>
+          <span>The ReLife Project</span>
+        </a>
+        <p>A youth-driven nonprofit educating communities about the link between environmental health and brain health.</p>
+        <a href="mailto:relifeproj@gmail.com">relifeproj@gmail.com</a>
+        <a href="https://www.instagram.com/the.relife.project" target="_blank" rel="noopener" class="footer-insta">
+          <i class="fa-brands fa-instagram"></i> @the.relife.project
+        </a>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#initiatives">Initiatives</a></li>
+            <li><a href="index.html#greenroom">The Green Room</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="index.html#contact">Get Involved</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 The ReLife Project · All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Nav mobile
+    document.getElementById('hamburger').addEventListener('click', () =>
+      document.getElementById('mobileMenu').classList.toggle('open'));
+
+    // Animate cards in
+    gsap.fromTo('.team-card',
+      { opacity: 0, y: 60, scale: 0.97 },
+      {
+        opacity: 1, y: 0, scale: 1,
+        duration: 0.8, stagger: 0.2,
+        ease: 'power3.out',
+        scrollTrigger: { trigger: '.team-cards', start: 'top 80%' }
+      }
+    );
+
+    gsap.fromTo('.team-mission h2, .team-mission p, .team-mission .btn',
+      { opacity: 0, y: 30 },
+      {
+        opacity: 1, y: 0,
+        duration: 0.7, stagger: 0.15,
+        ease: 'power3.out',
+        scrollTrigger: { trigger: '.team-mission', start: 'top 80%' }
+      }
+    );
+  </script>
+</body>
+</html>
