@@ -281,6 +281,70 @@ document.querySelectorAll(".wave").forEach((wave, i) => {
   });
 });
 
+// ── Gallery & Lightbox ────────────────────────────────────────────────────────
+const galleryItems = document.querySelectorAll('.gallery-item');
+const lightbox     = document.getElementById('lightbox');
+const lightboxImg  = document.getElementById('lightboxImg');
+const lightboxClose = document.getElementById('lightboxClose');
+const lightboxPrev = document.getElementById('lightboxPrev');
+const lightboxNext = document.getElementById('lightboxNext');
+
+if (galleryItems.length) {
+  const images = Array.from(galleryItems).map(item => item.querySelector('img').src);
+  let current = 0;
+
+  function openLightbox(index) {
+    current = index;
+    lightboxImg.src = images[current];
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    gsap.fromTo(lightboxImg, { scale: 0.92, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: 'power3.out' });
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function showNext() {
+    current = (current + 1) % images.length;
+    gsap.to(lightboxImg, { opacity: 0, x: -30, duration: 0.2, onComplete: () => {
+      lightboxImg.src = images[current];
+      gsap.fromTo(lightboxImg, { opacity: 0, x: 30 }, { opacity: 1, x: 0, duration: 0.25, ease: 'power2.out' });
+    }});
+  }
+
+  function showPrev() {
+    current = (current - 1 + images.length) % images.length;
+    gsap.to(lightboxImg, { opacity: 0, x: 30, duration: 0.2, onComplete: () => {
+      lightboxImg.src = images[current];
+      gsap.fromTo(lightboxImg, { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.25, ease: 'power2.out' });
+    }});
+  }
+
+  galleryItems.forEach((item, i) => item.addEventListener('click', () => openLightbox(i)));
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightboxNext.addEventListener('click', showNext);
+  lightboxPrev.addEventListener('click', showPrev);
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'ArrowRight') showNext();
+    if (e.key === 'ArrowLeft') showPrev();
+    if (e.key === 'Escape') closeLightbox();
+  });
+
+  // Animate gallery items on scroll
+  gsap.fromTo('.gallery-item',
+    { opacity: 0, scale: 0.92 },
+    {
+      opacity: 1, scale: 1,
+      duration: 0.6, stagger: 0.07, ease: 'power3.out',
+      scrollTrigger: { trigger: '.gallery-grid', start: 'top 83%' }
+    }
+  );
+}
+
 // ── Contact form (Formspree AJAX) ─────────────────────────────────────────────
 const contactForm = document.getElementById("contactForm");
 const submitBtn   = document.getElementById("submitBtn");
