@@ -935,6 +935,7 @@ footer {
   color: var(--gray);
 }
 .init-features li i { color: var(--green); font-size: .8rem; }
+.featured-init .init-features li { color: #ffffff; }
 .featured-init .init-features li i { color: rgba(255,255,255,.7); }
 
 /* ── How it works ────────────────────────────────────────────────────────── */
