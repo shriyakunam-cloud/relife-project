@@ -555,6 +555,33 @@ h2 {
   margin-bottom: 16px;
 }
 
+.gr-links {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.btn-outline-dark {
+  background: transparent;
+  color: var(--dark);
+  border: 2px solid var(--border);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 99px;
+  font-size: .95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.btn-outline-dark:hover {
+  border-color: #1DB954;
+  color: #1DB954;
+  transform: translateY(-2px);
+}
+
 .greenroom-list {
   margin: 28px 0 36px;
   display: flex;
